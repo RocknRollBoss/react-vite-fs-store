@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@theme {
+  --font-inter: "Inter", serif;
+  /* ... */
+}
+@import "tailwindcss";
+@custom-variant 2xl (@media (max-width: 96rem));
+@custom-variant xl (@media (max-width: 80rem));
+@custom-variant lg (@media (max-width: 64rem));
+@custom-variant md (@media (max-width: 48rem));
+@custom-variant sm (@media (max-width: 40rem));
+.slider::after {
+  content: "";
+  background-color: rgb(21, 21, 21, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}
+.swiper-pagination-bullet {
+  height: 3px !important;
+  width: 150px !important;
+  background-color: black !important;
+  border-radius: 0 !important;
+  opacity: 1 !important;
+  margin: 0 15px !important;
+}
+.swiper-pagination-bullet-active {
+  height: 6px !important;
+  background-color: white !important;
+}
+
+.horizontal-slider {
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  border: 1px solid gray;
+}
+.menu {
+  display: flex;
+  gap: 36px;
+}
+@media (max-width: 768px) {
+  .menu {
+    padding-top: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    transform: translateY(-100%);
+    transition: all 0.3 ease;
+  }
+  .menu.active {
+    transform: translateY(0);
+  }
+  .swiper-pagination-bullet {
+    height: 3px !important;
+    width: 60px !important;
+  }
+  .swiper-pagination-bullet-active {
+    height: 3px !important;
+  }
+}
+@media (max-width: 640px) {
+  .swiper-pagination-bullet {
+    width: 35px !important;
+  }
+}
