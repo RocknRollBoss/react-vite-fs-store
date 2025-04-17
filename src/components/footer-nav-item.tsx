@@ -1,16 +1,20 @@
-import React from "react";
 type Props = {
   items: string[];
 };
+
 export const FooterNavItem: React.FC<Props> = ({ items }) => {
   return (
-    <ul className="max-w-[250px]">
+    <ul className="text-center md:text-left">
       {items.map((item, idx) => (
         <li
           key={idx}
-          className="pb-10 first:pb-[40px] first:font-bold first:text-[24px] first:pointer-events-none"
+          className={`${
+            idx === 0
+              ? "pb-6 text-xl font-semibold pointer-events-none"
+              : "pb-2"
+          }`}
         >
-          <a className="hover:text-blue-400 duration-200" href="#">
+          <a className="hover:text-blue-400 transition duration-200" href="#">
             {item}
           </a>
         </li>

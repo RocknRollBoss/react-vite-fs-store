@@ -12,15 +12,16 @@ export const Favourites: React.FC = () => {
     toast.error("Item removed from cart");
   };
   return (
-    <Container className="max-w-[1220px] my-0 mx-auto  px-10px">
+    <Container className="max-w-[1220px] mx-auto px-4">
       <div className="py-10">
         <Title
           size="sm"
           className="text-center text-2xl font-bold mb-10"
           text="Favourites"
         />
+
         {favouritesItems.length ? (
-          <div className="grid grid-cols-4 gap-x-[30px] gap-y-[50px]">
+        <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 g gap-x-[40px] gap-y-[80px]">
             {favouritesItems.map((item) => (
               <ProductCard
                 key={item.id}
@@ -34,9 +35,9 @@ export const Favourites: React.FC = () => {
             ))}
           </div>
         ) : (
-          <p className="text-2xl text-center">
-            you have not added any products to your favorites
-          </p>
+          <div className="text-center text-xl text-gray-400 font-medium">
+            You have not added any products to your favourites.
+          </div>
         )}
       </div>
     </Container>

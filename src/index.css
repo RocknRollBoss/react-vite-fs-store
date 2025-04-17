@@ -3,12 +3,13 @@
   --font-inter: "Inter", serif;
   /* ... */
 }
-@import "tailwindcss";
+
 @custom-variant 2xl (@media (max-width: 96rem));
 @custom-variant xl (@media (max-width: 80rem));
 @custom-variant lg (@media (max-width: 64rem));
 @custom-variant md (@media (max-width: 48rem));
 @custom-variant sm (@media (max-width: 40rem));
+
 .slider::after {
   content: "";
   background-color: rgb(21, 21, 21, 0.3);

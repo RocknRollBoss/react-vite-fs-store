@@ -3,7 +3,7 @@ export { Header } from "./header";
 export { FooterNavItem } from "./footer-nav-item";
 export { Footer } from "./footer";
 export { NavbarItem } from "./navbar-item";
-export { Navbar } from "./navbar";
+export {MobileMenu} from './mobile-menu'
 export { TopInfo } from "./top-info";
 export { Title } from "./ui/title";
 export { Video } from "./video";

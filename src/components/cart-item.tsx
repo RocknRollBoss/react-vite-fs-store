@@ -25,29 +25,29 @@ export const CartItem: React.FC<Props> = ({
   incrQuantity,
   decrQuantity,
   quantity,
-}: any) => {
+}) => {
   const images = getImage(img);
   const defPrice = useRef(price);
 
   return (
-    <div className="flex justify-between items-center shadow-md">
-      <div className="flex gap-4 items-center">
+    <div className="flex justify-between items-center gap-4 p-4 bg-white shadow-md rounded-md md:flex-col md:items-start">
+      <div className="flex items-center gap-4 md:w-full">
         <img
-          className="max-w-[100px] rounded-b-md"
+          className="max-w-[100px] rounded-md object-cover"
           src={images[0]}
           alt="cart-item"
         />
         <div className="flex flex-col gap-1">
           <Title
-            className="font-semibold text-xl max-w-[120px] md:text-lg"
+            className="font-semibold text-xl max-w-[160px] md:text-lg"
             size="md"
-            text={title.slice(0, 20)}
+            text={title.slice(0, 30)}
           />
-          <p className="font-medium text-sm">{cat.name}</p>
+          <p className="font-medium text-sm">{cat}</p>
         </div>
       </div>
 
-      <div className="flex gap-5 items-center md:gap-3">
+      <div className="flex gap-4 items-center md:w-full">
         <Button
           className="hover:bg-slate-200 rounded-full p-2"
           type="button"
@@ -64,14 +64,17 @@ export const CartItem: React.FC<Props> = ({
           <SquarePlus />
         </Button>
       </div>
-      <p className="text-[22px] font-bold md:text-lg">{price} $</p>
-      <Button
-        className="hover:bg-slate-200 rounded-full p-2"
-        type="button"
-        onClick={() => removeCartItem(id)}
-      >
-        <X />
-      </Button>
+
+      <div className="flex items-center gap-4 md:justify-between md:w-full">
+        <p className="text-2xl font-bold md:text-lg">{price} $</p>
+        <Button
+          className="hover:bg-slate-200 rounded-full p-2"
+          type="button"
+          onClick={() => removeCartItem(id)}
+        >
+          <X />
+        </Button>
+      </div>
     </div>
   );
 };

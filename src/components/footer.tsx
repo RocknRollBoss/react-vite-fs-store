@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import { Container } from "./container";
 import { FooterNavItem } from "./footer-nav-item";
+
 const navItems = [
   ["Products", "New", "Sell", "Used"],
   ["Work with", "Partners", "Client", "Сustomes"],
@@ -9,35 +10,50 @@ const navItems = [
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-black pt-[40px] pb-[30px]">
-      <Container className="max-w-[1220px] my-0 mx-auto  px-10px ">
-        <div>
-          <nav className=" text-white  flex justify-around mb-[50px] leading-5 sm:grid sm:grid-cols-1 sm:place-items-center ">
-            <FooterNavItem items={navItems[0]} />
-            <FooterNavItem items={navItems[1]} />
-            <FooterNavItem items={navItems[2]} />
-          </nav>
-          <p className="flex justify-center mb-[30px] font-bold text-[20px]">
-            © 2010-2025. All Rights Reserved
-          </p>
-          <ul className="flex gap-5 justify-center">
-            <li>
-              <a href="https://instagram.com/">
-                <Instagram />
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/">
-                <Twitter />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/">
-                <Facebook />
-              </a>
-            </li>
-          </ul>
+    <footer className="bg-black pt-12 pb-8 text-white">
+      <Container className="max-w-[1220px] mx-auto px-4">
+        <div className="grid grid-cols-3 gap-6 md:grid-cols-1 md:gap-10 place-items-center mb-10">
+          {navItems.map((item, index) => (
+            <FooterNavItem key={index} items={item} />
+          ))}
         </div>
+
+        <p className="text-center font-bold text-lg mb-8">
+          © 2010-2025. All Rights Reserved
+        </p>
+
+        <ul className="flex justify-center gap-6">
+          <li>
+            <a
+              href="https://instagram.com/"
+              className="hover:text-blue-400 transition"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram size={24} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://x.com/"
+              className="hover:text-blue-400 transition"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Twitter size={24} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://facebook.com/"
+              className="hover:text-blue-400 transition"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook size={24} />
+            </a>
+          </li>
+        </ul>
       </Container>
     </footer>
   );

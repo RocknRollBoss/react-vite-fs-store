@@ -42,41 +42,44 @@ export const SingleProduct: React.FC = () => {
     toast.success("You have successfully added the product to favourites");
   };
   return (
-    <Container className="max-w-[1220px] my-0 mx-auto  px-10px">
-      <div className="py-[40px]">
-        <div className="flex">
+    <Container className="max-w-[1220px] mx-auto px-4">
+      <div className="py-10">
+        <div className="flex md:flex-col gap-6">
           <img
-            className="max-w-[380px] rounded-md"
+            className="max-w-[380px] w-full rounded-md object-cover"
             src={images[0]}
             alt="main-img"
           />
-          <div className="pl-4 flex flex-col gap-1">
+
+          <div className="pl-4 flex flex-col gap-2 md:flex-row md:overflow-x-auto md:pl-0">
             {images.map((img, idx) => (
               <ProductImage src={img} key={idx} />
             ))}
           </div>
-          <div className="flex flex-col gap-4 pl-8">
+
+          <div className="flex flex-col gap-4 pl-8 md:pl-0">
             <Title
               size="sm"
               text={product.title}
-              className="text-lg font-medium  max-w-[300px]"
+              className="text-xl font-semibold max-w-[300px]"
             />
-            <p className="text-xl font-bold">{product.price} $</p>
-            <p className="max-w-[400px] text-sm leading-[14px] md:text-[8px]">
+            <p className="text-2xl font-bold">{product.price} $</p>
+            <p className="max-w-[400px] text-sm leading-5">
               {product.description}
             </p>
-            <div className="flex gap-3">
+
+            <div className="flex gap-4 md:flex-col">
               <Button
                 onClick={addItem}
                 type="button"
-                className="rounded-[6px] bg-blue-400 text-center py-3 px-[20px] text-white text-[16px] font-medium hover:text-blue-700 duration-300 md:text-xs md:py-2 md:px-[10px]"
+                className="rounded-md bg-blue-400 text-white text-base font-medium py-3 px-6 hover:text-blue-700 transition"
               >
                 Add to cart
               </Button>
               <Button
-                type="button"
-                className="rounded-[6px] bg-blue-400 text-center py-3 px-[20px]  text-white text-[16px] font-medium hover:text-blue-700 duration-300 md:text-xs md:py-1 md:px-[10px]"
                 onClick={addItemToFavourites}
+                type="button"
+                className="rounded-md bg-blue-400 text-white text-base font-medium py-3 px-6 hover:text-blue-700 transition"
               >
                 Add to favourites
               </Button>

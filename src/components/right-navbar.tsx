@@ -24,11 +24,10 @@ export const RightNavbar: React.FC = () => {
     <ul className="flex gap-5 items-center md:z-11">
       {location.pathname === `/${RoutesEnum.PRODUCTS}` && (
         <li>
-          <a>
-            <Search />
-          </a>
+          <Search />
         </li>
       )}
+
       {user ? (
         <UserProfile
           name={user.name}

@@ -33,58 +33,53 @@ export const Cart: React.FC = () => {
   };
 
   return (
-    <div className="py-10 relative ">
-      <Container className="max-w-[1220px] my-0 mx-auto px-10px">
+    <div className="py-10 relative">
+      <Container className="max-w-[1220px] mx-auto px-4">
         {isOrderReady ? (
           <Congratulations totalPrice={totalPrice} />
         ) : (
-          <div>
-            <div className="px-[120px] py-[40px]">
-              {!cartItems.length ? (
-                <Empty />
-              ) : (
-                <div>
-                  <Title
-                    size="md"
-                    className="text-3xl mb-10 font-semibold"
-                    text="Your cart"
-                  />
-                  <div className="flex flex-col gap-4 mb-10">
-                    {cartItems.map((item) => (
-                      <CartItem
-                        key={item.id}
-                        id={item.id}
-                        title={item.title}
-                        price={item.price}
-                        img={item.images}
-                        cat={item.category.name}
-                        quantity={item.quantity}
-                        removeCartItem={removeCartItem}
-                        incrQuantity={incrQuantity}
-                        decrQuantity={decrQuantity}
-                      />
-                    ))}
-                  </div>
-
-                  <div>
-                    <div className="flex justify-between items-end">
-                      <Title
-                        size="lg"
-                        text={`Total price:${totalPrice} $`}
-                        className="uppercase font-semibold text-xl"
-                      />
-                      <Button
-                        onClick={onClickOrder}
-                        className="font-semibold text-lg rounded-[6px] bg-blue-400 text-center py-3 px-[20px]  text-white text-[16px]  hover:text-blue-700 duration-300"
-                        type="button"
-                      >
-                        Proceed to checkout
-                      </Button>
-                    </div>
-                  </div>
+          <div className="py-10">
+            {!cartItems.length ? (
+              <Empty />
+            ) : (
+              <>
+                <Title
+                  size="md"
+                  className="text-3xl mb-10 font-semibold text-center md:text-2xl"
+                  text="Your cart"
+                />
+                <div className="flex flex-col gap-6 mb-10">
+                  {cartItems.map((item) => (
+                    <CartItem
+                      key={item.id}
+                      id={item.id}
+                      title={item.title}
+                      price={item.price}
+                      img={item.images}
+                      cat={item.category.name}
+                      quantity={item.quantity}
+                      removeCartItem={removeCartItem}
+                      incrQuantity={incrQuantity}
+                      decrQuantity={decrQuantity}
+                    />
+                  ))}
                 </div>
-              )}
-            </div>
+                <div className="flex justify-between items-center flex-wrap gap-4">
+                  <Title
+                    size="lg"
+                    text={`Total price: ${totalPrice} $`}
+                    className="uppercase font-semibold text-xl md:text-base"
+                  />
+                  <Button
+                    onClick={onClickOrder}
+                    className="rounded-md bg-blue-400 py-3 px-6 text-white font-semibold text-lg hover:text-blue-700 transition"
+                    type="button"
+                  >
+                    Proceed to checkout
+                  </Button>
+                </div>
+              </>
+            )}
           </div>
         )}
       </Container>
