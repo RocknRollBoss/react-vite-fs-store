@@ -31,7 +31,6 @@ export const ProductCard: React.FC<Props> = ({
 
   return (
     <div className="text-center relative hover:scale-105 transition duration-300">
-      {/* Метки */}
       {discount && (
         <span className="absolute left-0 top-0 bg-red-500 text-white px-2 py-1 text-sm font-semibold rounded-br-md">
           -{discount}%
@@ -50,14 +49,12 @@ export const ProductCard: React.FC<Props> = ({
         />
       )}
 
-      {/* Картинка */}
       <img
         className="border border-blue-400 w-full h-[250px] object-cover rounded-t-md"
         src={image[0]}
         alt={title}
       />
 
-      {/* Контент */}
       <div className="border border-blue-400 border-t-0 px-4 py-5 bg-white">
         <Title
           size="sm"
