@@ -2,27 +2,28 @@
 
 ## 🚀 About the Project
 
-**FS Shop** is a e-commerce store. Built with **React + TypeScript**, using **Vite**, **Zustand**, **TailwindCSS**, and **React Router**. Data is fetched from the public API: `http://fakeapi.platzi.com/`.
+FS Shop is a demo e-commerce store. Built with React + TypeScript, using Vite, Zustand, TailwindCSS, and React Router. Data is fetched from the public API: [http://fakeapi.platzi.com/](http://fakeapi.platzi.com/).
 
 The shop includes a product catalog, filtering, search, sorting, cart functionality, product details page, and authentication.
 
 ## ✨ Key Features
 
-* 🔍 **Product search** by name
-* 🏷️ **Category filtering**
-* 💲 **Price range filter** (from–to)
-* ⚙️ **Price sorting** (ascending/descending)
-* 🛒 **Shopping cart:**
+* 🔍 Product search by name
+* 🏷️ Category filtering
+* 💲 Price range filter (from–to)
+* ⚙️ Price sorting (ascending/descending)
+* 🛒 Shopping cart:
 
   * quantity update
   * remove products
   * automatic total price calculation
-* 🔐 **Authentication / JWT**
-* 📄 **Product details page**
-* ⚡ **Zustand store** (cart, filters, auth)
-* ⚡ **Custom hooks** (`use-filters`, `use-toggle-sort`, etc.)
-* 🌐 **Axios** for API requests
-* 🎨 **TailwindCSS** styling
+* 🔐 Authentication / JWT
+* 📄 Product details page
+* ⚡ Zustand store (cart, filters, auth)
+* ⚡ Custom hooks (use-filters, use-toggle-sort, etc.)
+* 🌐 Axios for API requests
+* 🎨 TailwindCSS styling
+* 📱 Fully responsive design
 
 ## 🧩 Technologies Used
 
@@ -44,6 +45,7 @@ pages/
 services/
 store/
 utils/
+public/screenshots/  # screenshots for README
 ```
 
 ## ▶️ Running the Project
@@ -61,22 +63,16 @@ npm run build
 
 ## 🌍 Deployment
 
-The project is deployed on Vercel:
-[https://react-vite-fs-store.vercel.app/](https://react-vite-fs-store.vercel.app/)
+The project is deployed on Vercel: [FS Shop Live](https://react-vite-fs-store.vercel.app/)
 
 ## 📸 Screenshots
 
-![Home Page](/screenshots/home.png)
-![Catalog & Filtering](/screenshots/catalog.png)
-![Shopping Cart](/screenshots/cart.png)
-![Product Details](/screenshots/product.png)
+To make screenshots visible on GitHub, they are stored in the `screenshots/` folder next to README.
 
-The project is fully responsive and works correctly on mobile devices.
+```markdown
+![Home Page](screenshots/home.png)
+![Product Catalog & Filtering](screenshots/catalog.png)
+![Shopping Cart](screenshots/cart.png)
+![Product Details Page](screenshots/product.png)
+```
 
-## 📜 License
-
-MIT (add if needed)
-
----
-
-This README can be further enhanced with badges, GIF preview, demo video, code blocks, API examples, and improved structure.
