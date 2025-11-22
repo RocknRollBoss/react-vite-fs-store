@@ -67,9 +67,10 @@ The project is deployed on Vercel: [FS Shop Live](https://react-vite-fs-store.ve
 
 ## 📸 Screenshots
 ![Home Page](screenshots/home.png)
-![Product Catalog](screenshots/catalog.png)
-![Shopping Cart](screenshots/cart.png)
-![Product Details](screenshots/product.png)
+![Catalog](screenshots/catalog.png)
+![Cart](screenshots/cart.png)
+![Product](screenshots/product.png)
+
 
 
 
