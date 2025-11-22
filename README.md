@@ -66,12 +66,11 @@ npm run build
 The project is deployed on Vercel: [FS Shop Live](https://react-vite-fs-store.vercel.app/)
 
 ## 📸 Screenshots
-
-To make screenshots visible on GitHub, they are stored in the `screenshots/` folder next to README.
 ![Home](screenshots/home.png)
 ![Catalog](screenshots/catalog.png)
 ![Cart](screenshots/cart.png)
 ![Product](screenshots/product.png)
+
 
 
 ```
