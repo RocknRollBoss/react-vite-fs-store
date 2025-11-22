@@ -68,11 +68,11 @@ The project is deployed on Vercel: [FS Shop Live](https://react-vite-fs-store.ve
 ## 📸 Screenshots
 
 To make screenshots visible on GitHub, they are stored in the `screenshots/` folder next to README.
+![Home](screenshots/home.png)
+![Catalog](screenshots/catalog.png)
+![Cart](screenshots/cart.png)
+![Product](screenshots/product.png)
 
-```markdown
-![Home Page](screenshots/home.png)
-![Product Catalog & Filtering](screenshots/catalog.png)
-![Shopping Cart](screenshots/cart.png)
-![Product Details Page](screenshots/product.png)
+
 ```
 
