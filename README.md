@@ -66,10 +66,10 @@ The project is deployed on Vercel:
 
 ## 📸 Screenshots
 
-![Home Page](public/screenshots/home.png)
-![Catalog & Filtering](public/screenshots/catalog.png)
-![Shopping Cart](public/screenshots/cart.png)
-![Product Details](public/screenshots/product.png)
+![Home Page](/screenshots/home.png)
+![Catalog & Filtering](/screenshots/catalog.png)
+![Shopping Cart](/screenshots/cart.png)
+![Product Details](/screenshots/product.png)
 
 The project is fully responsive and works correctly on mobile devices.
 
