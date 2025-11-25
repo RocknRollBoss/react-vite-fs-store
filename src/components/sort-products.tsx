@@ -9,38 +9,45 @@ type Props = {
 };
 
 const sortItems: SortOption[] = ["Default", "Lowest price", "Highest price"];
+
 export const SortProducts: React.FC<Props> = ({ sort, setSort }) => {
   const { sortRef, togglePopup, setTogglePopup } = useToggleSort();
+
   return (
-    <div>
-      <div className="ml-[40px] md:ml-1" ref={sortRef}>
-        <div
-          className="flex gap-2 text-blue-400 font-bold items-center pb-2 mt-1 md:text-sm"
-          onClick={() => setTogglePopup(!togglePopup)}
-        >
-          <ChevronDown className="text-black md:w-[18px]" />
-          <Button type="button" className="text-lg md:text-sm">
-            {sort}
-          </Button>
-        </div>
-        <ul
-          className={
-            togglePopup
-              ? "shadow-lg shadow-slate-400 mw-[200px] p-4 text-lg flex flex-col gap-y-4 opacity-100 cursor-pointer md:text-sm md:font-normal"
-              : "shadow-lg shadow-slate-400 mw-[200px] p-4 text-lg flex flex-col gap-y-4 opacity-0 md:text-sm md:font-normal "
-          }
-        >
-          {sortItems.map((item, idx) => (
-            <li
-              className={`${sort === item && "text-blue-400"}`}
-              key={`${item}__${idx}`}
-              onClick={() => setSort(item)}
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div ref={sortRef} className="relative ml-[40px] md:ml-1 z-10">
+      <Button
+        type="button"
+        onClick={() => setTogglePopup(!togglePopup)}
+        className="flex items-center gap-2 text-lg md:text-sm font-semibold text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+      >
+        {sort}
+        <ChevronDown
+          className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${
+            togglePopup ? "rotate-180" : "rotate-0"
+          }`}
+        />
+      </Button>
+
+      <ul
+        className={`absolute left-0 mt-2 w-[200px] bg-white shadow-lg rounded-lg overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
+          togglePopup ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        {sortItems.map((item, idx) => (
+          <li
+            key={`${item}-${idx}`}
+            onClick={() => {
+              setSort(item);
+              setTogglePopup(false);
+            }}
+            className={`px-4 py-2 cursor-pointer hover:bg-blue-50 transition-colors duration-150 ${
+              sort === item ? "text-blue-500 font-semibold" : "text-gray-700"
+            }`}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
