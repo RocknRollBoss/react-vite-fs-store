@@ -54,7 +54,7 @@ export const ProductsWrapper: React.FC = () => {
     return sortProductByPrice(sortOption, products);
   }, [products, sortOption]);
   return (
-    <section className="pt-[200px] pb-[150px]">
+    <section className="pt-[20px] pb-[15px]">
       <Container className="max-w-[1220px] my-0 mx-auto px-10px">
         <Title
           size="lg"
@@ -62,7 +62,7 @@ export const ProductsWrapper: React.FC = () => {
           className="text-center mb-[50px] text-[50px]"
         />
         <RangePrice setPriceRange={handeSetPriceRange} />
-        <div className="px-[120px] pb-[50px] flex font-bold md:px-3 md:overflow-hidden md:justify-between">
+        <div className="px-[120px]  flex font-bold md:px-3 md:overflow-hidden md:justify-between">
           <Categories
             setActiveCategory={handleSetCategory}
             activeCategory={activeCategory}
@@ -74,7 +74,7 @@ export const ProductsWrapper: React.FC = () => {
             <Loading className="size-12 animate-spin" />
           </div>
         ) : (
-          <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 g gap-x-[40px] gap-y-[80px]">
+          <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 g gap-x-[40px] gap-y-[60px]">
             {products.length ? (
               sortProducts().map((product) => (
                 <ProductCard
