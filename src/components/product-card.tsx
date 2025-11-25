@@ -30,7 +30,13 @@ export const ProductCard: React.FC<Props> = ({
   const image = !getImage(images) ? images : getImage(images);
 
   return (
-    <div className="text-center relative hover:scale-105 transition duration-300">
+    <div
+      className={
+        favourites
+          ? "text-center relative"
+          : "text-center relative hover:scale-105 transition duration-300"
+      }
+    >
       {discount && (
         <span className="absolute left-0 top-0 bg-red-500 text-white px-2 py-1 text-sm font-semibold rounded-br-md">
           -{discount}%

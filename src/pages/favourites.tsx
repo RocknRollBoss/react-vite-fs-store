@@ -21,7 +21,7 @@ export const Favourites: React.FC = () => {
         />
 
         {favouritesItems.length ? (
-        <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 g gap-x-[40px] gap-y-[80px]">
+          <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 g gap-x-[40px] gap-y-[80px]">
             {favouritesItems.map((item) => (
               <ProductCard
                 key={item.id}
