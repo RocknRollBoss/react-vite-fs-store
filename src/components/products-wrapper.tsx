@@ -54,7 +54,7 @@ export const ProductsWrapper: React.FC = () => {
     return sortProductByPrice(sortOption, products);
   }, [products, sortOption]);
   return (
-    <section className="pt-[20px] pb-[15px]">
+    <section className="pt-[50px] pb-[30px]">
       <Container className="max-w-[1220px] my-0 mx-auto px-10px">
         <Title
           size="lg"
