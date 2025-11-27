@@ -14,11 +14,11 @@ export const SortProducts: React.FC<Props> = ({ sort, setSort }) => {
   const { sortRef, togglePopup, setTogglePopup } = useToggleSort();
 
   return (
-    <div ref={sortRef} className="relative ml-[40px] md:ml-1 z-10">
+    <div ref={sortRef} className="relative ml-auto  md:ml-1 z-10">
       <Button
         type="button"
         onClick={() => setTogglePopup(!togglePopup)}
-        className="flex items-center gap-2 text-lg md:text-sm font-semibold text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+        className="text-blue-400 flex items-center gap-2 text-xl md:text-sm font-semibold  hover:bg-gray-100 transition-colors duration-200"
       >
         {sort}
         <ChevronDown

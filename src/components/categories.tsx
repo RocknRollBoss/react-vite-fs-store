@@ -20,8 +20,8 @@ export const Categories: React.FC<Props> = ({
         <button
           className={`${
             activeCategory === 0
-              ? "text-2xl font-bold cursor-pointer text-blue-400 md:text-lg"
-              : "text-2xl font-bold cursor-pointer md:text-lg "
+              ? "text-xl font-bold cursor-pointer text-blue-400 md:text-lg"
+              : "text-xl font-bold cursor-pointer md:text-lg "
           }`}
           onClick={() => setActiveCategory(0)}
         >
@@ -33,8 +33,8 @@ export const Categories: React.FC<Props> = ({
           <button
             className={`text-2xl font-bold cursor-pointer ${
               activeCategory === cat.id
-                ? "text-2xl font-bold cursor-pointer text-blue-400 md:text-lg"
-                : "text-2xl font-bold cursor-pointer md:text-lg"
+                ? "text-xl font-bold cursor-pointer text-blue-400 md:text-lg"
+                : "text-xl font-bold cursor-pointer md:text-lg"
             }`}
             onClick={() => setActiveCategory(cat.id)}
           >
