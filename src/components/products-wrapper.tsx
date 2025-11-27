@@ -74,7 +74,7 @@ export const ProductsWrapper: React.FC = () => {
             <Loading className="size-12 animate-spin" />
           </div>
         ) : (
-          <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 g gap-x-[40px] gap-y-[60px]">
+          <div className="mt-[50px] grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 g gap-x-[40px] gap-y-[60px]">
             {products.length ? (
               sortProducts().map((product) => (
                 <ProductCard
