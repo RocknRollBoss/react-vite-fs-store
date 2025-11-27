@@ -9,7 +9,7 @@ export const Favourites: React.FC = () => {
   );
   const onRemoveItem = (id: number) => {
     removeFromFavourites(id);
-    toast.error("Item removed from cart");
+    toast.error("Item removed from favourites");
   };
   return (
     <Container className="max-w-[1220px] mx-auto px-4">
